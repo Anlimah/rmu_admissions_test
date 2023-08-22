@@ -25,7 +25,7 @@ require_once('../../inc/page-data.php');
             </p>
 
             <?php
-            if ($app_type[0]["form_id"] == 1) { ?>
+            if (isset($app_type[0]["form_id"]) && $app_type[0]["form_id"] == 1) { ?>
                 <p>
                     </br>Many schools issue transcripts electronically, either through their own web services or through vendors. If this option is available through the institutions you attended, please specify that your transcript(s) be sent to the address below as this will expedite the delivery of your transcript(s) and the completion of your application: <a href="mailto:transcripts@rmu.edu.gh">transcripts@rmu.edu.gh</a>.
                 </p>
@@ -124,6 +124,7 @@ require_once('../../inc/page-data.php');
                         </select>
                         <select class="required-field form-select-option form-select form-select-sm" name="year-enrolled" id="year-enrolled" <?= $pre_uni_rec[0]["pre_uni_rec"] == 1 ? "required" : "" ?>>
                             <option hidden value="">Year</option>
+                            <option value="2023" <?= $pre_uni_rec[0]["year_enrolled"] == "2023" ? "selected" : "" ?>>2023</option>
                             <option value="2022" <?= $pre_uni_rec[0]["year_enrolled"] == "2022" ? "selected" : "" ?>>2022</option>
                             <option value="2021" <?= $pre_uni_rec[0]["year_enrolled"] == "2021" ? "selected" : "" ?>>2021</option>
                             <option value="2020" <?= $pre_uni_rec[0]["year_enrolled"] == "2020" ? "selected" : "" ?>>2020</option>
@@ -189,6 +190,7 @@ require_once('../../inc/page-data.php');
                         </select>
                         <select <?= $pre_uni_rec[0]["completed"] == 1 ? "required" : "" ?> class="completed-uni form-select-option form-select form-select-sm" name="year-completed-uni" id="year-completed-uni">
                             <option hidden value="">Year</option>
+                            <option value="2023" <?= $pre_uni_rec[0]["year_completed"] == "2023" ? "selected" : "" ?>>2023</option>
                             <option value="2022" <?= $pre_uni_rec[0]["year_completed"] == "2022" ? "selected" : "" ?>>2022</option>
                             <option value="2021" <?= $pre_uni_rec[0]["year_completed"] == "2021" ? "selected" : "" ?>>2021</option>
                             <option value="2020" <?= $pre_uni_rec[0]["year_completed"] == "2020" ? "selected" : "" ?>>2020</option>

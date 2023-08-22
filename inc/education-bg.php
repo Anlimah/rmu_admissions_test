@@ -345,6 +345,7 @@ $courses = $user->fetchCourses();
                                 </select>
                                 <select name="edit-year-started" id="edit-year-started" class="transform-text edu-mod-date-y form-select form-select-sm">
                                     <option value="Year" hidden>Year</option>
+                                    <option value="2023">2023</option>
                                     <option value="2022">2022</option>
                                     <option value="2021">2021</option>
                                     <option value="2020">2020</option>
@@ -401,7 +402,7 @@ $courses = $user->fetchCourses();
                                 </select>
                                 <select name="edit-year-completed" id="edit-year-completed" class="transform-text edu-mod-date-y form-select form-select-sm">
                                     <option value="Year" hidden>Year</option>
-                                    <option value="2022">2023</option>
+                                    <option value="2023">2023</option>
                                     <option value="2022">2022</option>
                                     <option value="2021">2021</option>
                                     <option value="2020">2020</option>
@@ -470,24 +471,6 @@ $courses = $user->fetchCourses();
                             <div id="edit-not-waiting" class="">
                                 <div class="mb-4" id="edit-core-subjects">
                                     <label class="form-label">Core Subjects <span class="input-required">*</span></label>
-                                    <?php
-                                    for ($i = 0; $i < count(SHSCOURSES["subjects"]["core"]); $i++) {
-                                    ?>
-                                        <div id="edit-core-sbj<?= ($i + 1) ?>-group" class="mb-2">
-                                            <div class="row">
-                                                <div class="col-9">
-                                                    <input name="edit-core-sbj<?= ($i + 1) ?>" id="edit-core-sbj<?= ($i + 1) ?>" value="<?= SHSCOURSES["subjects"]["core"][$i] ?>" class="form-control" type="text" disabled>
-                                                </div>
-                                                <div class="col-3">
-                                                    <select name="edit-core-sbj-grd<?= ($i + 1) ?>" id="edit-core-sbj-grd<?= ($i + 1) ?>" class="edu-mod-grade form-select form-select-sm subject-grade">
-                                                        <option value="Grade" hidden>Grade</option>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    <?php
-                                    }
-                                    ?>
                                 </div>
                                 <div class="mb-4" id="edit-elective-subjects">
                                     <label class="form-label">Elective Subjects <span class="input-required">*</span></label>
